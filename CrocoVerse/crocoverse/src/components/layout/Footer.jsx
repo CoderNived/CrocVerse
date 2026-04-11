@@ -14,6 +14,7 @@ export default function Footer() {
             <li><Link to="/" className="hover:text-white">Home</Link></li>
             <li><Link to="/species" className="hover:text-white">Species</Link></li>
             <li><Link to="/ml-tools" className="hover:text-white">ML Tools</Link></li>
+            <li><Link to="/dashboard" className="hover:text-white">Dashboard</Link></li>
           </ul>
         </div>
         <div>

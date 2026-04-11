@@ -12,11 +12,9 @@ export default function SpeciesHero({ species }) {
       </nav>
       <h1 className="text-4xl font-bold mb-1">{species.commonName}</h1>
       <p className="text-lg italic text-gray-400 mb-6">{species.scientificName}</p>
-      <img
-        src={species.imageUrl}
-        alt={species.commonName}
-        className="w-full h-72 object-cover rounded-xl"
-      />
+      <div className="w-full h-72 bg-gray-800 rounded-xl flex items-center justify-center">
+        <span className="text-gray-400 text-sm">Image coming in Phase 2</span>
+      </div>
     </div>
   )
 }

@@ -4,8 +4,8 @@ const navLinks = [
   { label: 'Home', to: '/' },
   { label: 'Species', to: '/species' },
   { label: 'ML Tools', to: '/ml-tools' },
+  { label: 'Dashboard', to: '/dashboard' },
 ]
-
 export default function Navbar() {
   const { pathname } = useLocation()
   return (
