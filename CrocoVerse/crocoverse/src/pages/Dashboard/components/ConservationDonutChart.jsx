@@ -187,3 +187,4 @@ ConservationDonutChart.propTypes = {
   loading: PropTypes.bool,
   error: PropTypes.string,
 };
+// Done building the ConservationDonutChart component with a custom tooltip and center label. This chart will visually represent the distribution of species across different conservation statuses, making it easy for users to grasp the overall picture at a glance.
