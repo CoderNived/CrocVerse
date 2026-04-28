@@ -231,3 +231,5 @@ ObservationTrendChart.propTypes = {
   loading: PropTypes.bool,
   error: PropTypes.string,
 };
+
+// Done building the ObservationTrendChart component, which displays the trends of species observations over time. The component includes a custom tooltip for better data presentation and allows users to toggle the visibility of individual species lines. An overall trend line is also included for context. The component handles loading, error, and empty states gracefully using the ChartWrapper.
