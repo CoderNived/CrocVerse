@@ -174,3 +174,5 @@ SpeciesDistributionChart.propTypes = {
   loading: PropTypes.bool,
   error: PropTypes.string,
 };
+
+//  Done building the SpeciesDistributionChart component, which displays the distribution of species across continents using a horizontal bar chart. The color of each bar indicates the average conservation risk score for that continent, providing an immediate visual cue about the relative risk levels. The component includes a custom tooltip for detailed information on hover and handles loading, error, and empty states gracefully using the ChartWrapper. This chart helps users quickly understand where species are most concentrated and how risk levels vary by continent.
