@@ -196,3 +196,5 @@ HabitatHeatmap.propTypes = {
   loading: PropTypes.bool,
   error: PropTypes.string,
 };
+
+// Done building the HabitatHeatmap component, which displays habitat suitability scores across different continents and habitats. The heatmap uses color coding to indicate the suitability levels, and includes a legend for easy interpretation. The component also handles loading, error, and empty states gracefully using the ChartWrapper.
