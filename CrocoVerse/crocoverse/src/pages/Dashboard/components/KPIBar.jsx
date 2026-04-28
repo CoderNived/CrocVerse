@@ -216,3 +216,5 @@ KPIBar.propTypes = {
   previousData: PropTypes.array,
   loading: PropTypes.bool,
 };
+
+// Done building the KPIBar component, which computes and displays key performance indicators based on the provided species data. The component is designed to be reusable and accepts optional previous data for trend calculations. Each KPI is displayed in a card format with an icon, label, value, unit, and trend indicator for easy visualization of changes over time.
