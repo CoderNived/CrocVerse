@@ -180,3 +180,5 @@ WeightLengthScatter.propTypes = {
   loading: PropTypes.bool,
   error: PropTypes.string,
 };
+
+// Done building the WeightLengthScatter component, which visualizes the relationship between species' average length and weight using a scatter plot. Each point's size represents the population size, while the color indicates the conservation status. The component includes a custom tooltip for detailed information on hover and handles loading, error, and empty states gracefully using the ChartWrapper. This visualization helps users quickly identify patterns and outliers in the dataset, such as large but lightweight species or small but heavy ones.  
