@@ -1,6 +1,5 @@
 // 1. Core imports
 import express from 'express'
-import dotenv from 'dotenv'
 
 // 2. Security & logging middleware
 import helmet from 'helmet'
@@ -10,31 +9,31 @@ import morgan from 'morgan'
 // 3. Internal modules
 import connectDB from './config/db.js'
 import rootRouter from './routes/index.js'
+import env from './config/env.js'
+import errorHandler from './middleware/errorHandler.js'
 
-// 4. Load environment variables
-dotenv.config()
-
-// 5. App initialization
+// 4. App initialization
 const app = express()
 
-// 6. Global middleware (NO custom logic here)
+// 5. Global middleware (NO business logic)
 app.use(helmet())
-app.use(cors())
-app.use(morgan('dev'))
+app.use(cors({ origin: env.FRONTEND_URL }))
+app.use(morgan(env.NODE_ENV === 'development' ? 'dev' : 'combined'))
 app.use(express.json())
 
-// 7. Routes
+// 6. Routes
 app.use('/api', rootRouter)
 
-// 8. Port config
-const PORT = process.env.PORT || 5000
+// 7. Global error handler (MUST be last)
+app.use(errorHandler)
 
-// 9. Start server ONLY after DB connection
+// 8. Start server ONLY after DB connection
 const startServer = async () => {
   try {
     await connectDB()
-    app.listen(PORT, () => {
-      console.log(`🚀 Server running on port ${PORT}`)
+
+    app.listen(env.PORT, () => {
+      console.log(`🚀 Server running on port ${env.PORT}`)
     })
   } catch (error) {
     console.error('❌ Failed to start server:', error.message)
